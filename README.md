@@ -2,7 +2,7 @@
 
 CRUD de ventas con grilla paginada/filtrable, alta/edición manual, import/export CSV y un dashboard liviano.
 
-**Stack:** NestJS + TypeORM + PostgreSQL | React + Vite + Tailwind
+**Stack:** Node.js + NestJS + TypeORM + PostgreSQL | React + Vite + Tailwind
 
 ## Cómo correrlo
 
