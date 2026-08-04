@@ -64,6 +64,6 @@ Auth/roles, colas o jobs para imports masivos, charts de librería, tests e2e co
 - **Listado con joins/filtros:** riesgo de full scan si faltan índices o el count es caro. Mediría latency p95 de `GET /sales` con filtros típicos (`EXPLAIN ANALYZE` + logs de duración).
 - **Dashboard en cliente:** si se trae demasiado volumen, el browser se traba. Mediría payload y tiempo de render; el techo natural es un aggregate en SQL.
 
-## Importante
+## Stack utilizado
 
-Elegí Node + NestJS + TypeORM + PostgreSQL por su arquitectura sólida y React + Vite + Tailwind porque me permiten desarrollar una interfaz rápida, moderna y mantenible.
+Elegí Node.js con NestJS, TypeORM y PostgreSQL por su arquitectura sólida y mantenible, y React con Vite y Tailwind CSS por su rapidez de desarrollo, rendimiento y facilidad para construir una interfaz moderna.
