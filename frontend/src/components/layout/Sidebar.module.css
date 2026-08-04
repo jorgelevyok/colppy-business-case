@@ -1,0 +1,237 @@
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  height: 100%;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  gap: 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 8px;
+}
+
+.brandMark {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #7c4ddb, #5229a8);
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+}
+
+.brandName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.brandSub {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.section {
+  flex: 1;
+  min-height: 0;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-placeholder);
+  padding: 0 10px;
+  margin-bottom: 8px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.link:hover {
+  background: var(--bg-muted);
+  color: var(--color-text);
+}
+
+.linkActive {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.linkDisabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--color-border);
+}
+
+.avatarBtn {
+  display: contents;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: default;
+  color: inherit;
+  font: inherit;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  min-width: 0;
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profileRole {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    overflow-x: auto;
+  }
+
+  .section {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sectionLabel {
+    display: none;
+  }
+
+  .nav {
+    flex-direction: row;
+  }
+
+  .profile {
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .profileName {
+    font-size: 13px;
+  }
+
+  .profileRole {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 425px) {
+  .sidebar {
+    overflow: visible;
+  }
+
+  .profile {
+    padding: 0;
+    gap: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+  }
+
+  .avatarBtn {
+    display: flex;
+    cursor: pointer;
+    border-radius: 999px;
+  }
+
+  .avatarBtn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  .profileInfo {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 20;
+    min-width: 160px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: var(--bg-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  }
+
+  .profileOpen .profileInfo {
+    display: block;
+  }
+}

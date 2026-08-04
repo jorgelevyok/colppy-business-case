@@ -1,0 +1,14 @@
+.backdrop {
+  backdrop-filter: blur(2px);
+}
+
+.closeBtn {
+  color: var(--color-text-muted);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  background: var(--bg-muted);
+  color: var(--color-text);
+}

@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colppy brand: https://colppy.com/ */
+  --color-primary: #6633cc;
+  --color-primary-dark: #5229a8;
+  --color-primary-light: #f3effc;
+  --color-primary-tint: rgba(102, 51, 204, 0.12);
+  --color-primary-hover-bg: #e8e0fa;
+  --color-accent: #f6c94e;
+
+  --color-secondary: #90a4ae;
+  --body-background: #f5f8fd;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-muted: #eef2f7;
+
+  --color-text: #3a3a3a;
+  --color-text-muted: #6b7280;
+  --color-text-inverse: #ffffff;
+  --color-text-primary: var(--color-text);
+  --color-text-subtitle: var(--color-text-muted);
+  --color-text-placeholder: #9ca3af;
+
+  --color-border: #e4e4e4;
+  --color-border-strong: #d1d5db;
+  --color-border-divider: #eef2f7;
+
+  --input-focus: #6633cc;
+  --input-focus-shadow: rgba(102, 51, 204, 0.22);
+  --input-bg: #f8fafc;
+  --input-border-color: var(--color-border);
+  --input-height: 44px;
+
+  --color-danger: #dc2626;
+  --color-danger-tint: #fee2e2;
+  --color-success: #55bb46;
+  --color-success-bg: #eef9ec;
+  --color-warning: #b45309;
+  --color-warning-bg: #fffbeb;
+  --color-info: #6633cc;
+  --color-info-bg: #f3effc;
+  --color-info-text: #5229a8;
+
+  --color-overlay: rgba(38, 19, 77, 0.45);
+  --container-background: var(--bg-surface);
+  --color-header-modal: var(--bg-subtle);
+  --shadow-sm: 0 1px 2px rgba(38, 19, 77, 0.05);
+  --shadow-card: 0 1px 3px rgba(38, 19, 77, 0.06), 0 1px 2px rgba(38, 19, 77, 0.04);
+  --shadow-modal: 0 20px 40px rgba(38, 19, 77, 0.18);
+  --shadow-button: 0 2px 8px rgba(102, 51, 204, 0.32);
+
+  --sidebar-width: 260px;
+  --font-basic-size: 14px;
+
+  /* TableBack tokens */
+  --color-text-body: var(--color-text);
+  --color-text-heading: var(--color-text);
+  --color-text-sort-hidden: #dadada;
+  --color-text-info-alt: var(--color-text-muted);
+  --color-border-ec: var(--color-border-strong);
+  --color-gray: #6b7280;
+  --color-gray-dark: #111827;
+  --font-color: var(--color-text);
+  --input-focus-border-color: var(--input-focus);
+  --cell-odd-color: var(--bg-surface);
+  --paginator-color: var(--color-primary);
+  --shadow-filters: 0 4px 20px rgba(38, 19, 77, 0.12);
+}
+
+body {
+  background: var(--body-background);
+  color: var(--color-text);
+}
+
+.special-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #c4b5e8 transparent;
+}
+
+.special-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.special-scroll::-webkit-scrollbar-thumb {
+  background: #c4b5e8;
+  border-radius: 999px;
+}

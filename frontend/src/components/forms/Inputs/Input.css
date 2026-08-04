@@ -1,0 +1,96 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.field__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.field__required {
+  color: var(--color-danger);
+}
+
+.field__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field__input {
+  width: 100%;
+  height: var(--input-height);
+  border: 1px solid var(--input-border-color);
+  border-radius: 12px;
+  background: var(--input-bg);
+  padding: 0 14px;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.field__control--left .field__input {
+  padding-left: 42px;
+}
+
+.field__control--right .field__input {
+  padding-right: 42px;
+}
+
+.field__input::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+.field__input:focus {
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px var(--input-focus-shadow);
+  background: var(--bg-surface);
+}
+
+.field__input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.field__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  display: inline-flex;
+  pointer-events: none;
+}
+
+.field__icon--left {
+  left: 14px;
+}
+
+.field__icon--right {
+  right: 14px;
+}
+
+.field__control[data-danger='true'] .field__input,
+.field__control[data-danger='true'] .field__select,
+.field__control[data-danger='true'] .date-input__trigger {
+  border-color: var(--color-danger);
+}
+
+.field__control[data-danger='true']:focus-within .field__input,
+.field__control[data-danger='true'] .field__input:focus,
+.field__control[data-danger='true'] .select-trigger[aria-expanded='true'],
+.field__control[data-danger='true'] .date-input__trigger:focus {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px var(--color-danger-tint);
+}
+
+.validation-message {
+  margin-top: -2px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--color-danger);
+}

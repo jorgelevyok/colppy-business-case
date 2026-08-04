@@ -1,0 +1,29 @@
+@keyframes skeleton-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes skeleton-fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.skeleton {
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        var(--skeleton-base) 25%,
+        var(--skeleton-highlight) 50%,
+        var(--skeleton-end) 95%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 2.5s infinite, skeleton-fadeIn 0.3s;
+}

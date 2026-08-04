@@ -1,0 +1,152 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--color-border-divider);
+}
+
+.exampleRow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.exampleRow :global(.btn) {
+  width: 100%;
+  justify-content: center;
+}
+
+.exampleHint {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  word-break: break-word;
+}
+
+.previewMeta {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.resultsModal {
+  max-width: 720px !important;
+}
+
+.resultsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--color-border-ec);
+  border-radius: 10px;
+  background: var(--container-background);
+}
+
+.statOk {
+  border-color: var(--color-success, #16a34a);
+}
+
+.statError {
+  border-color: var(--color-danger, #dc2626);
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.statValue {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.errorsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 360px;
+  overflow: auto;
+}
+
+.errorsTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.errorsHint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.errorsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.errorItem {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border-ec);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color-danger, #dc2626) 6%, white);
+}
+
+.errorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.errorCode {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.errorMessages {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 12px;
+  color: var(--color-danger, #dc2626);
+}
+
+.allOk {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-success, #16a34a);
+}
+
+@media (max-width: 640px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
